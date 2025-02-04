@@ -1,0 +1,17 @@
+/* Updated fade-in with upward movement */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly lower */
+  animation: fadeInUp 4s ease-out forwards; /* Longer duration and smooth easing */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px); /* Start 20px below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
