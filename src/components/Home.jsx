@@ -23,9 +23,9 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         {/* Left Section */}
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-left w-full text-4xl sm:text-5xl font-bold text-white relative top-5">
+        <h2 className="text-3xl sm:text-5xl font-bold text-white relative top-5 text-center sm:text-left">
             I am a 
-            <div className=" bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 bg-clip-text text-transparent text-4xl sm:text-5xl font-bold"
+            <div className=" bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 bg-clip-text text-transparent text-4xl sm:text-5xl font-bold inline-block min-h-[50px]"
             style = {{minWidth: "500px", display: "inline-block", minHeight: '125px'}}
             >
               <ReactTyped 
@@ -47,7 +47,8 @@ const Home = () => {
           {fadeText && (
                 <motion.span 
                   key="software-engineer"
-                  className="absolute left-0 top-11 py-2 bg-clip-text text-transparent text-4xl sm:text-5xl font-bold inline-block"
+                  className="absolute top-11 py-2 bg-clip-text text-transparent text-3xl sm:text-5xl font-bold inline-block w-full text-center sm:text-left left-1/2 sm:left-0 transform -translate-x-1/2 sm:translate-x-0"
+
                   style={{
                     backgroundImage: "linear-gradient(90deg, #06b6d4, #3b82f6,#9333ea, #06b6d4)",
                     backgroundSize: "600% 100%",
@@ -76,23 +77,29 @@ const Home = () => {
 
 
 
-          <p className="text-gray-500 py-4 max-w-md relative bottom-10">
-            I am a Junior at New York University with experience in software development. I have experience in full-stack development, data management and analysis, and machine learning. 
+            <p className="text-gray-500 py-4 max-w-md w-full text-center sm:text-left mx-auto sm:mx-0 px-4 sm:px-0 relative bottom-10 break-words">
+            I am a Junior at New York University with experience in software development. This includes projects in full-stack development, data management and analysis, and machine learning. 
           </p>
           <div className = ""> 
           <motion.div
-              whileHover={{ scale: 1.1, }}
-              whileTap={{ scale: 0.95 }}
-              className="text-white w-fit flex items-center py- rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
-            >
-              <Link to = "portfolio" smooth duration = {500} offset = {-120}  className="group text-white w-fit px-6 py-2 my-2 flex justify-center items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">  
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-white w-fit flex justify-center sm:justify-start items-center py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer mx-auto sm:mx-0"
+          >
+            <Link 
+              to="portfolio" 
+              smooth 
+              duration={500} 
+              offset={-120}  
+              className="group text-white px-6 py-2 my-2 flex justify-center items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer w-auto min-w-[150px] sm:min-w-0"
+            >  
+              Portfolio
+              <span className="group-hover:rotate-90 duration-300">
+                <MdOutlineKeyboardArrowRight size={23} className="ml-1" />
+              </span> 
+            </Link> 
+          </motion.div>
 
-                  Portfolio
-                <span className="group-hover:rotate-90 duration-300">
-                  <MdOutlineKeyboardArrowRight size={23} className="ml-1" />
-                </span> 
-              </Link> 
-            </motion.div>
           </div>
         </div>
 

@@ -54,7 +54,7 @@ const Portfolio = () => {
 
         {/* Animated Grid of Projects */}
         <motion.div 
-          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-8 px-12 sm:px-0"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 px-4 sm:px-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }} 
           transition={{ duration: 1, ease: 'easeOut' }}
@@ -63,7 +63,7 @@ const Portfolio = () => {
           {portfolios.map(({ id, title,url }) => (  
             <motion.div
               key={id}
-              className="relative w-full h-40 rounded-lg flex justify-center item-center items-center text-white font-bold text-2xl shadow-md text-center px-1 cursor-pointer"
+              className="relative w-full h-40 rounded-lg flex justify-center items-center text-white font-bold text-xl sm:text-2xl md:text-3xl shadow-md text-center px-2 cursor-pointer"
               style={{
                 background: "linear-gradient(45deg, #06b6d4, #3b82f6)",
               }}
@@ -72,8 +72,11 @@ const Portfolio = () => {
               whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(6, 182, 212, 0.6)" }}
               transition={{ duration: 0.8, ease: "easeOut" }} 
               onClick= {() => window.open(url, "_blank")}
-            >
+            > 
+            <span className="w-full text-center px-4 text-lg sm:text-xl md:text-2xl lg:text-3xl break-words" > 
               {title}
+            </span>
+              
             </motion.div>
           ))}
         </motion.div>
