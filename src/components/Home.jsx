@@ -23,7 +23,7 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         {/* Left Section */}
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white relative top-5">
+          <h2 className="text-left w-full text-4xl sm:text-5xl font-bold text-white relative top-5">
             I am a 
             <div className=" bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 bg-clip-text text-transparent text-4xl sm:text-5xl font-bold"
             style = {{minWidth: "500px", display: "inline-block", minHeight: '125px'}}

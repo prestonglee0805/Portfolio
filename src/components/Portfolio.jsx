@@ -54,7 +54,7 @@ const Portfolio = () => {
 
         {/* Animated Grid of Projects */}
         <motion.div 
-          className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-8 px-12 sm:px-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }} 
           transition={{ duration: 1, ease: 'easeOut' }}

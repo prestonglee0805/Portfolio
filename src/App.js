@@ -10,7 +10,8 @@ import Contact from './components/contact';
 import RightsReserved from './components/RightsReserved'
 
 function App() { 
-  return ( // Add the return statement here 
+  return ( // Add the return statement here  
+  <div className="App overflow-x-hidden">
     <div> 
       <NavBar /> 
       <Home />  
@@ -21,7 +22,8 @@ function App() {
       <Contact/> 
       <RightsReserved/>
       
-    </div>
+    </div> 
+  </div>
   );
 }
 

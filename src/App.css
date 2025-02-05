@@ -1,9 +1,17 @@
 .App {
   text-align: center;
+} 
+
+body, html {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
+
+
 .App-logo {
-  height: 40vmin;
+  height: 40vmin; 
+  max-width: 80%;
   pointer-events: none;
 }
 
@@ -22,7 +30,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  max-width: 100%; /* Ensure no element overflows */
+  padding: 0 15px; /* Adds padding to prevent content from hitting edges */
+  box-sizing: border-box; /* Ensures padding is counted in total width */
 }
+
 
 .App-link {
   color: #61dafb;
