@@ -77,7 +77,7 @@ const Home = () => {
 
 
 
-            <p className="text-gray-500 py-4 max-w-md w-full text-center sm:text-left mx-auto sm:mx-0 px-4 sm:px-0 relative bottom-10 break-words">
+            <p className="text-gray-500 py-4 max-w-md w-full text-center sm:text-left mx-auto sm:mx-0 px-7 sm:px-0 relative bottom-10 break-words leading-relaxed">
             I am a Junior at New York University with experience in software development. This includes projects in full-stack development, data management and analysis, and machine learning. 
           </p>
           <div className = ""> 

@@ -19,7 +19,15 @@ body, html {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+} 
+
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 1.5vmin); /* Slightly smaller for mobile */
+    padding: 20px; /* Add padding for better spacing */
+  }
 }
+
 
 .App-header {
   background-color: #282c34;
