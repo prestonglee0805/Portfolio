@@ -5,10 +5,10 @@ const About = () => {
   return (
     <div
       name="about" //can scroll to here using href="#about" from navBar 
-      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white flex justify-center items-center"
+      className="w-full min-h-screen bg-gradient-to-b from-gray-800 to-black text-white flex justify-center items-center"
     >
      <motion.div
-        className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center mt-[-300px]"
+        className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center gap-y-8"
         initial={{ opacity: 0, y: 80 }} // Initial state: invisible and below
         whileInView={{ opacity: 1, y: 0 }} // Smooth animation
         transition={{ duration: 1.5, ease: 'easeOut' }}

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import HeroImage from '../assets/heroImage.png';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { ReactTyped } from 'react-typed'; 
-import './Home.css';
+import './Home.css'; 
+import { Link } from 'react-scroll'
 
 const Home = () => {  
 
@@ -39,15 +40,15 @@ const Home = () => {
             </div>
           </h2>
           <p className="text-gray-500 py-4 max-w-md relative bottom-10">
-            I am a Junior at New York University with experience in software development. I love to work on web and back-end applications.
+            I am a Junior at New York University with experience in software development. I have experience in full-stack development, data management and analysis, and machine learning. 
           </p>
           <div>
-            <button className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer relative bottom-3">
+            <Link to = "portfolio" smooth duration = {500} className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer relative bottom-3">
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
                 <MdOutlineKeyboardArrowRight size={23} className="ml-1" />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
 
