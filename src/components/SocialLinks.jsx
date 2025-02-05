@@ -1,7 +1,6 @@
 import React from 'react';
 import {FaGithub, FaLinkedin} from 'react-icons/fa';
 import {HiOutlineMail} from 'react-icons/hi';
-import { BsFillPersonLinesFill } from "react-icons/bs";
 
 
 
@@ -48,7 +47,10 @@ const SocialLinks = () => {
 
         {links.map(({id,child,href,style,download}) => ( 
           <li key = {id}  
-          className={"group flex justify-between items-center w-40 h-14 px-4  bg-black text-white cursor-pointer ml-[-100px] transition-all duration-700 hover:ml-0 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500  hover:rounded-md hover:text-white" + " " + style} > 
+          className={`group flex justify-between items-center w-40 h-14 px-4 bg-black text-white cursor-pointer 
+          ml-[-100px] transition-all duration-700 hover:ml-0 hover:bg-gradient-to-r hover:from-cyan-500 
+          hover:to-blue-500 hover:rounded-md hover:text-white ${style}`}  
+ > 
 
        <a href = {href}
        className = "flex justify-between items-center w-full text-white"  
