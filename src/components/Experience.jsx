@@ -59,7 +59,7 @@ export const Experience = () => {
             />
           </div>
 
-          <p className="py-6 text-lg">These are the technologies I have worked with.</p>
+          <p className="py-6 text-lg">These are the technologies I have worked with:</p>
         </div>
 
         {/* Animated Grid of Technologies */}

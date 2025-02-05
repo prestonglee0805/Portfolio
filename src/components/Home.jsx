@@ -79,17 +79,24 @@ const Home = () => {
           <p className="text-gray-500 py-4 max-w-md relative bottom-10">
             I am a Junior at New York University with experience in software development. I have experience in full-stack development, data management and analysis, and machine learning. 
           </p>
-          <div>
-            <Link to = "portfolio" smooth duration = {500} offset = {-120} className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer relative bottom-3">
-              Portfolio
-              <span className="group-hover:rotate-90 duration-300">
-                <MdOutlineKeyboardArrowRight size={23} className="ml-1" />
-              </span>
-            </Link>
+          <div className = ""> 
+          <motion.div
+              whileHover={{ scale: 1.1, }}
+              whileTap={{ scale: 0.95 }}
+              className="text-white w-fit flex items-center py- rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+            >
+              <Link to = "portfolio" smooth duration = {500} offset = {-120}  className="group text-white w-fit px-6 py-2 my-2 flex justify-center items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">  
+
+                  Portfolio
+                <span className="group-hover:rotate-90 duration-300">
+                  <MdOutlineKeyboardArrowRight size={23} className="ml-1" />
+                </span> 
+              </Link> 
+            </motion.div>
           </div>
         </div>
 
-        {/* Right Section */}
+        {/* Right Section PHOTO */}
         <div className="flex justify-center md:justify-end w-full md:w-auto">
           <img
             src={HeroImage}

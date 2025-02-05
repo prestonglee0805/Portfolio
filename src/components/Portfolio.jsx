@@ -1,20 +1,14 @@
 import React from 'react'; 
 import { motion } from 'framer-motion'; 
-import arrayDestruct from '../assets/portfolio/arrayDestruct.jpg';
-import installNode from '../assets/portfolio/installNode.jpg';
-import NavBar from '../assets/portfolio/navbar.jpg';
-import ReactParallax from '../assets/portfolio/reactParallax.jpg';
-import reactSmooth from '../assets/portfolio/reactSmooth.jpg';
-import reactWeather from '../assets/portfolio/reactWeather.jpg';
 
 const Portfolio = () => {
   const portfolios = [
-    { id: 1, title: "LSTM Model" },  
-    { id: 2, title: "Amazon Web Scraper" },
-    { id: 3, title: "CSVIFY" }, 
-    { id: 4, title: "BoundingBox" }, 
-    { id: 5, title: "Spotify Utilites" }, 
-    { id: 6, title: "Sonny Bot" }
+    { id: 1, title: "TensorFlow Stock Model", url: "https://github.com/prestonglee0805/Stock-Prediction-Model" },  
+    { id: 2, title: "Amazon Web Scraper", url: "https://github.com/prestonglee0805/Amazon-Web-Scraper"},
+    { id: 3, title: "CSVify", url: "https://github.com/prestonglee0805/CSVify" }, 
+    { id: 4, title: "Bounding Box Labeller for NASA", url: "https://github.com/prestonglee0805/seg-bbox-labeller"}, 
+    { id: 5, title: "Spotify Utilites", url: "https://github.com/prestonglee0805/Spotify-Utils"}, 
+    { id: 6, title: "Sonny ChatBot Playground", url: "https://github.com/prestonglee0805/SonnyBotTester"}
   ];
 
   return (
@@ -22,7 +16,7 @@ const Portfolio = () => {
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full gap-y-10">
 
         {/* Title Section with Animated Gradient and Underline */}
-        <div className="pb-8 relative flex flex-col items-start">
+        <div className="pb-8 mt-20 relative flex flex-col items-start">
           <div className="inline-block relative">
             <motion.h1
               className="text-6xl font-bold inline-block text-transparent bg-clip-text"
@@ -53,7 +47,7 @@ const Portfolio = () => {
             /> 
           </div>
 
-          <p className="py-6 text-lg">Click on the project to view source code!</p>
+          <p className="py-6 text-lg">Click on the project to view the source code in GitHub:</p>
         </div> 
 
 
@@ -61,24 +55,29 @@ const Portfolio = () => {
         {/* Animated Grid of Projects */}
         <motion.div 
           className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
-          viewport={{ once: true, amount: 0.2 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }} 
+          transition={{ duration: 1, ease: 'easeOut' }}
+          viewport={{ once: true }}
         > 
-          {portfolios.map(({ id, title }) => (  
+          {portfolios.map(({ id, title,url }) => (  
             <motion.div
-            key={id}
-            className="relative w-full h-40 rounded-lg flex justify-center items-center text-white font-bold text-2xl overflow-hidden shadow-md"
-            style={{
-              background: "linear-gradient(-45deg, #4158D0, #E560DC, #FFB374, #E5F5FF, #D840B6)",
-              backgroundSize: "400% 400%",
-            }}
-          >
-            {title}
-          </motion.div>
+              key={id}
+              className="relative w-full h-40 rounded-lg flex justify-center item-center items-center text-white font-bold text-2xl shadow-md text-center px-1 cursor-pointer"
+              style={{
+                background: "linear-gradient(45deg, #06b6d4, #3b82f6)",
+              }}
+              initial={{ opacity: 0, scale: 0.9 }} // ✅ Each tile fades in and grows
+              whileInView={{ opacity: 1, scale: 1 }} // ✅ Smooth animation 
+              whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(6, 182, 212, 0.6)" }}
+              transition={{ duration: 0.8, ease: "easeOut" }} 
+              onClick= {() => window.open(url, "_blank")}
+            >
+              {title}
+            </motion.div>
           ))}
         </motion.div>
+
       </div>
     </div>
   );

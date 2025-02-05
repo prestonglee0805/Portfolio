@@ -56,15 +56,23 @@ const About = () => {
         </div>
 
 
-  <p className="text-xl mt-8">
-  I am a junior at NYU pursuing a bachelor's degree in computer science, with a strong focus on software engineering and development. My passion lies in exploring the intersection of finance and technology, combining technical expertise with real-world financial insights. I’ve gained hands-on experience through a software engineering internship at Sonar, where I contributed to collaborative development projects, leveraging teamwork and problem-solving to deliver innovative solutions. In addition, my experience in private equity at Belveron Partners provided me with a strong foundation in creating actionable financial strategies.
+  <p className="text-xl mt-4">
+  Hey! I am a junior at NYU pursuing a bachelor's degree in computer science, with a focus on software engineering and development, along with an interest in machine learning and data science. My passion lies in exploring the intersection of finance, technology, and data analysis, combining my technical skills with real-world problems to find actionable solutions.  
+  </p> 
+
+  <p className="text-xl mt-4">
+  I’ve gained hands-on experience as a software engineering intern at Sonar, where I contributed to full-stack development and AI-driven applications. My work involved optimizing backend performance, integrating APIs, and collaborating in an agile team to develop scalable solutions. Additionally, I work closely with AI data scientists on data preprocessing, model evaluation, and fine-tuning large language models (LLMs) for various use cases. My experience in private equity at Belveron Partners has further equipped me with a strong foundation in financial modeling, data-driven investment analysis, and leveraging technology to enhance decision-making processes.
   </p>
 
-  <br />
-
-  <p className="text-xl">
+  <p className="text-xl mt-4">
   I’m dedicated to building systems that drive meaningful impact, powered by my skills in software engineering, financial analysis, fundraising, collaboration, and a commitment to supporting others.
-  </p>
+  </p> 
+
+  <p className="text-xl mt-4">
+  Apart from coding, I enjoy rock climbing, weightlifting, music production, filmmaking, skateboarding, and fashion. I have a lot of familiarity with editing and fx softwares including AfterEffects, PremierePro, and Red Giant. I am a huge music fan, particularly of alternative rock and shoegaze. This includes Jeff Buckley, Radiohead, Slowdive, and the Smiths!
+  </p> 
+
+
 </motion.div>
 
     </div>

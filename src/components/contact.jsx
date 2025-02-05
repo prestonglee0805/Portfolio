@@ -8,41 +8,41 @@ const Contact = () => {
         <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full"> 
           
           {/* Title Section with Animated Gradient and Underline */}
-          <div className="pb-8 relative flex flex-col items-start">
-            <div className="inline-block relative">
-              <motion.h1
-                className="text-6xl font-bold inline-block text-transparent bg-clip-text"
-                style={{
-                  backgroundImage: "linear-gradient(to right, #06b6d4, #3b82f6)",
-                }}
-                animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                }}
-                transition={{
-                  duration: 5,
-                  ease: "linear",
-                }}
-              >
-                Contact
-              </motion.h1>
+        <div className="pb-8 mt-20 relative flex flex-col items-start mt-5">
+          <div className="inline-block relative">
+            <motion.h1
+              className="text-6xl font-bold inline-block text-transparent bg-clip-text"
+              style={{
+                backgroundImage: "linear-gradient(to right, #06b6d4, #3b82f6)",
+              }}
+              animate={{
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+              }}
+              transition={{
+                duration: 5,
+                ease: "linear",
+              }}
+            >
+              Contact 
+            </motion.h1>
 
-              {/* Animated Underline */}
-              <motion.div
-                className="absolute bottom-0 left-0 h-1.5 w-full"
-                style={{
-                  backgroundImage: "linear-gradient(to right, #06b6d4, #3b82f6)", 
-                  bottom: "-9px"
-                }}
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }} // Stays after animation
-                transition={{ duration: 1.75, ease: "easeOut" }}
-              />
-            </div>
-            <p className="py-6 text-lg">Submit the form below to contact me and get in touch:</p>
+            {/* Animated Underline */}
+            <motion.div
+              className="absolute bottom-0 left-0 h-1.5 w-full"
+              style={{
+                backgroundImage: "linear-gradient(to right, #06b6d4, #3b82f6)",
+                bottom: "-9px"
+              }}
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              transition={{ duration: 1.75, ease: "easeOut" }}
+            /> 
+          </div> 
           </div>
 
+
           {/* Form Section */}
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center py-20">
             <motion.form 
               action="https://getform.io/f/bollxzxa" 
               method="POST" 
