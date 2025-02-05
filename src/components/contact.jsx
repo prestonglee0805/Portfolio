@@ -1,43 +1,96 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
     <div> 
-
       <div name="contact" className="w-full min-h-screen bg-gradient-to-b from-black to-gray-800 text-white">
- 
-      
         <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full"> 
-          <div className="pb-8"> 
           
-            <p className = "text-4xl font-bold inline border-b-4 border-gray-500">Contact</p>
-            <p className = "py-6">Submit the form below to contact me</p>
+          {/* Title Section with Animated Gradient and Underline */}
+          <div className="pb-8 relative flex flex-col items-start">
+            <div className="inline-block relative">
+              <motion.h1
+                className="text-6xl font-bold inline-block text-transparent bg-clip-text"
+                style={{
+                  backgroundImage: "linear-gradient(to right, #06b6d4, #3b82f6)",
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{
+                  duration: 5,
+                  ease: "linear",
+                }}
+              >
+                Contact
+              </motion.h1>
 
+              {/* Animated Underline */}
+              <motion.div
+                className="absolute bottom-0 left-0 h-1.5 w-full"
+                style={{
+                  backgroundImage: "linear-gradient(to right, #06b6d4, #3b82f6)", 
+                  bottom: "-9px"
+                }}
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }} // Stays after animation
+                transition={{ duration: 1.75, ease: "easeOut" }}
+              />
+            </div>
+            <p className="py-6 text-lg">Submit the form below to contact me and get in touch:</p>
           </div>
-          
-        
-        <div className="flex justify-center items-center" >
 
-          <form action="https://getform.io/f/bollxzxa" method = "POST" className = "flex flex-col w-full md:w-1/2 gap-4">
+          {/* Form Section */}
+          <div className="flex justify-center items-center">
+            <motion.form 
+              action="https://getform.io/f/bollxzxa" 
+              method="POST" 
+              className="flex flex-col w-full md:w-1/2 gap-4"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <motion.input 
+                type="text" 
+                name="name" 
+                placeholder="Enter your name" 
+                className="p-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                whileFocus={{ scale: 1.05 }}
+              /> 
 
-            <input type="text" name = "name" placeholder = "Enter your name" className = "p-4 bg-transparent border-2 rounded-md text-white focus: outline-none" /> 
+              <motion.input 
+                type="email" 
+                name="email" 
+                placeholder="Enter your email" 
+                className="p-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                whileFocus={{ scale: 1.05 }}
+              /> 
 
-            <input type="text" name = "Email" placeholder = "Enter your email" className = "p-4 bg-transparent border-2 rounded-md text-white focus: outline-none" /> 
+              <motion.textarea 
+                placeholder="Enter your message" 
+                name="message" 
+                rows="10" 
+                className="p-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                whileFocus={{ scale: 1.05 }}
+              /> 
 
-            <textarea placeholder="message" name = "message" rows="10" className = "p-4 bg-transparent border-2 rounded-md text-white focus:outline-none"></textarea> 
+              <motion.button 
+                name="contact-button" 
+                className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+              >
+                Let's Connect
+              </motion.button>
 
-            <button name = "contact-button" className = " text-white bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">Lets connect</button>
-
-          </form>
-
-
+            </motion.form>
           </div> 
         </div> 
-
-      
       </div>
     </div>
-  )
+  );
 }
 
 export default Contact;

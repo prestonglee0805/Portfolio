@@ -36,17 +36,6 @@ const SocialLinks = () => {
       ), 
       href: 'mailto:prestongordonlee@gmail.com',
     }, 
-    {
-      id: 4, 
-      child: (
-        <>
-          Resume<BsFillPersonLinesFill size={30} className = "transform transition-transform duration-700 group-hover:rotate-[360deg]" /> 
-          </> 
-      ), 
-      href: "/Resume2024PrestonLee.pdf", 
-      style: 'rounded-br-md', 
-      download: true, 
-    }
 
 
   ]

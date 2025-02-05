@@ -3,11 +3,15 @@ import HeroImage from '../assets/heroImage.png';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { ReactTyped } from 'react-typed'; 
 import './Home.css'; 
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll' 
+import { motion } from 'framer-motion';
+
 
 const Home = () => {  
 
-  const [fadeIn, setFadeIn] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);   
+
+  const [fadeText, setFadeText] = useState(false); 
 
   useEffect(() => {
     // Trigger the fade-in effect when the page loads
@@ -24,26 +28,59 @@ const Home = () => {
             <div className=" bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 bg-clip-text text-transparent text-4xl sm:text-5xl font-bold"
             style = {{minWidth: "500px", display: "inline-block", minHeight: '125px'}}
             >
-              <ReactTyped
+              <ReactTyped 
                 strings={[
                   'Software Developer',
                   'Full Stack Developer', 
-                  'Data Scientist',
-                  'Software Engineer',
+                  'Data Scientist', 
+                  ''
+                  
                 ]}
-                typeSpeed={65}
+                typeSpeed={8}
                 backSpeed={30} 
-                loop = {false}   
-                setTyping = {true}
+                loop = {false}
+                
+                onComplete={() => setTimeout(() => setFadeText(true), 500)}    
               />  
 
-            </div>
-          </h2>
+          {/* Fades in AFTER ReactTyped finishes typing */}
+          {fadeText && (
+                <motion.span 
+                  key="software-engineer"
+                  className="absolute left-0 top-11 py-2 bg-clip-text text-transparent text-4xl sm:text-5xl font-bold inline-block"
+                  style={{
+                    backgroundImage: "linear-gradient(90deg, #06b6d4, #3b82f6,#9333ea, #06b6d4)",
+                    backgroundSize: "600% 100%",
+                  }}
+                  initial={{ opacity: 0 }} 
+                  animate={{
+                    opacity: 1, 
+                    backgroundPosition: ["0% 50%", "-300% 50%"], 
+                  }} 
+                  transition={{ 
+                    opacity: { duration: 2, ease: "easeOut" }, 
+                    backgroundPosition: { duration: 12, ease: "linear", repeat: Infinity, repeatType: "mirror" } 
+                  }}> 
+
+                  Software Engineer
+                </motion.span>
+              )} 
+
+          </div>
+            </h2> 
+
+
+
+
+
+
+
+
           <p className="text-gray-500 py-4 max-w-md relative bottom-10">
             I am a Junior at New York University with experience in software development. I have experience in full-stack development, data management and analysis, and machine learning. 
           </p>
           <div>
-            <Link to = "portfolio" smooth duration = {500} className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer relative bottom-3">
+            <Link to = "portfolio" smooth duration = {500} offset = {-120} className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer relative bottom-3">
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
                 <MdOutlineKeyboardArrowRight size={23} className="ml-1" />

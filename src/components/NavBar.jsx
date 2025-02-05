@@ -23,7 +23,7 @@ const NavBar = () => {
       <ul className="hidden md:flex">  
         {links.map(({ id, link }) => (  
           <li key={id} className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
-            <Link to={link} smooth duration={500} onClick={() => setNav(false)}>  
+            <Link to={link} smooth duration={500} offset = {-120} onClick={() => setNav(false)}>  
               {link}
             </Link>    
           </li>

@@ -6,7 +6,8 @@ import SocialLinks from './components/SocialLinks';
 import About from './components/About';  
 import Portfolio from './components/Portfolio'; 
 import { Experience } from './components/Experience'; 
-import Contact from './components/contact'; 
+import Contact from './components/contact';  
+import RightsReserved from './components/RightsReserved'
 
 function App() { 
   return ( // Add the return statement here 
@@ -17,7 +18,8 @@ function App() {
       <SocialLinks />  
       <Portfolio /> 
       <Experience />  
-      <Contact/>
+      <Contact/> 
+      <RightsReserved/>
       
     </div>
   );
